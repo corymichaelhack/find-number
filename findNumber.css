@@ -1,18 +1,29 @@
 #heading {
-
+   
 }
 
 #title {
-
+    display: flex;
+    justify-content: center;
 }
 
 #directions {
+    display: flex;
+    justify-content: center;
+}
 
+#question {
+    text-align: center;
+}
+
+#shape {
+    display: flex;
+    justify-content: center;
 }
 
 .square-small {
-    width: 10%;
-    padding-bottom: 10%;
+    width: 75px;
+    height: 75px;
 }
 
 .square-big {
@@ -23,7 +34,6 @@
 
 .square {
     background: purple;
-    
     float: left;
     margin: 1.66%;
     border-radius: 10%;
