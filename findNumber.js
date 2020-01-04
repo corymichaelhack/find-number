@@ -1,6 +1,7 @@
 let randomNumber = 3;
 let shapes;
 let numberContainer = document.querySelector('#number-container');
+let digit = 0;
 
 function createShapes(){
     for (let i = 0; i < randomNumber; i++){
@@ -21,8 +22,24 @@ function addClickHandlerToShape(){
     }
 }
 
+function getNextNumber(){
+    digit = digit + 1;
+    console.log("inside", digit)
+    return digit
+}
+console.log('outside', digit)
+
+
+
+
 function isClicked(){
-    console.log('hello')
+    
+    if (!this.classList.contains('number')){
+        this.classList.add('number')
+        this.innerText = getNextNumber(); 
+    } else {asdf
+        console.log('already clicked')
+    }
 }
 
 createShapes();
