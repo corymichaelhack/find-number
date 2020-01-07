@@ -1,5 +1,6 @@
 let randomNumber;
-let shapes;
+let shapeNum;
+let shapesArray = [ 'square', 'triangle'];
 let numberContainer = document.querySelector('#number-container');
 let digit = 0;
 
@@ -7,17 +8,22 @@ function setRandomNumber(){
     randomNumber = Math.floor(Math.random() * 10) + 1;
 }
 
+function setRandomShape(){
+     shapeNum = Math.floor(Math.random() * 2);
+     console.log(shapeNum);
+}
+
 function createShapes(){
     for (let i = 0; i < randomNumber; i++){
         let shape = document.createElement('div');
         numberContainer.appendChild(shape);
-        shape.setAttribute('class', 'square square-big');
+        shape.setAttribute('class', `shape ${shapesArray[shapeNum]} ${shapesArray[shapeNum]}-big`);
     }
     collectShapes();
 }
 
 function collectShapes(){
-    shapes = document.querySelectorAll('.square-big');
+    shapes = document.querySelectorAll(`.${shapesArray[shapeNum]}-big`);
 }
 
 function addClickHandlerToShape(){
@@ -30,10 +36,6 @@ function getNextNumber(){
     digit = digit + 1;
     return digit
 }
-
-
-
-
 
 function isClicked(){
     
@@ -55,6 +57,7 @@ function allShapesClicked(){
 }
 
 setRandomNumber();
+setRandomShape();
 createShapes();
 // collectShapes();
 addClickHandlerToShape();

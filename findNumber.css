@@ -16,9 +16,15 @@
     text-align: center;
 }
 
-#shape {
+#show-shape{
     display: flex;
     justify-content: center;
+}
+
+.shape {
+    background:grey;
+    float: left;
+    margin: 1%;
 }
 
 .square-small {
@@ -35,14 +41,40 @@
 
 
 .square {
-    background:grey;
+    /* background:grey;
     float: left;
-    margin: 1%;
+    margin: 1%; */
     border-radius: 10%;
     transition: background 0.4s;
     -webkit-transition: background 0.4s ;
     -moz-transition: background 0.4s ;
 }
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 90px solid red;
+  }
+
+.triangle-small {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 90px solid red;
+}
+
+.triangle-big {
+	width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 90px solid red;
+}
+
+
 
 #number-container {
     border: solid black 2px;
