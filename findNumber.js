@@ -1,16 +1,31 @@
 let randomNumber;
 let shapeNum;
-let shapesArray = [ 'square', 'triangle'];
+let shapesArray = [ 'square', 'triangle', 'circle'];
 let numberContainer = document.querySelector('#number-container');
 let digit = 0;
+
+
 
 function setRandomNumber(){
     randomNumber = Math.floor(Math.random() * 10) + 1;
 }
 
 function setRandomShape(){
-     shapeNum = Math.floor(Math.random() * 2);
+     shapeNum = Math.floor(Math.random() * 3);
      console.log(shapeNum);
+}
+
+function setQuestion(){
+    let questionTitle = document.querySelector('#question-title');
+    let question = document.createTextNode(`How many ${shapesArray[shapeNum]}s can you count?`);
+    questionTitle.appendChild(question);
+}
+
+function setQuestionShape(){
+    let showShape = document.querySelector('#show-shape');
+    let shape = document.createElement('div');
+    shape.setAttribute('class', ` ${shapesArray[shapeNum]} ${shapesArray[shapeNum]}-small`)
+    showShape.appendChild(shape);
 }
 
 function createShapes(){
@@ -38,7 +53,6 @@ function getNextNumber(){
 }
 
 function isClicked(){
-    
     if (!this.classList.contains('number')){
         this.classList.add('number')
         this.innerText = getNextNumber();
@@ -56,8 +70,12 @@ function allShapesClicked(){
     }    
 }
 
+
+
 setRandomNumber();
 setRandomShape();
+setQuestion()
+setQuestionShape()
 createShapes();
 // collectShapes();
 addClickHandlerToShape();

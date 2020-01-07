@@ -1,7 +1,3 @@
-#heading {
-   
-}
-
 #title {
     display: flex;
     justify-content: center;
@@ -22,9 +18,13 @@
 }
 
 .shape {
-    background:grey;
     float: left;
     margin: 1%;
+}
+
+.square {
+    background-color: red;
+    border-radius: 10%;
 }
 
 .square-small {
@@ -39,42 +39,42 @@
     justify-content: center;
 }
 
-
-.square {
-    /* background:grey;
-    float: left;
-    margin: 1%; */
-    border-radius: 10%;
-    transition: background 0.4s;
-    -webkit-transition: background 0.4s ;
-    -moz-transition: background 0.4s ;
-}
-
 .triangle {
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 90px solid red;
+    
   }
 
 .triangle-small {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 90px solid red;
+    border-bottom: 100px solid red;
 }
 
 .triangle-big {
-	width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 90px solid red;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid red;
+    display: flex;
+    justify-content: center;
 }
 
+.circle {
+    background: red;
+    border-radius: 50%
+}
 
+.circle-small {
+    width: 100px;
+    height: 100px;
+}
+
+.circle-big {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
 
 #number-container {
     border: solid black 2px;
@@ -84,7 +84,6 @@
 }
 
 .number {
-
     color: white;
     font-size: 5em;
     font-weight: 600;
