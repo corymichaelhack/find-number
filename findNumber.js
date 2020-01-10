@@ -90,7 +90,6 @@ function resetGame(){
     setQuestion();
     setQuestionShape();
     createShapes();
-    // collectShapes();
     addClickHandlerToShape();
 }
 
@@ -102,7 +101,6 @@ setRandomShape();
 setQuestion();
 setQuestionShape();
 createShapes();
-// collectShapes();
 addClickHandlerToShape();
 
 
