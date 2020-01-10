@@ -24,7 +24,7 @@ function setQuestion(){
 function setQuestionShape(){
     let showShape = document.querySelector('#show-shape');
     let shape = document.createElement('div');
-    shape.setAttribute('class', ` ${shapesArray[shapeNum]} ${shapesArray[shapeNum]}-small`)
+    shape.setAttribute('class', ` shape ${shapesArray[shapeNum]} ${shapesArray[shapeNum]}-small`)
     showShape.appendChild(shape);
 }
 
@@ -66,17 +66,42 @@ function allShapesClicked(){
     if ( digit === randomNumber){
         setTimeout(()=> {
             alert(`You counted all ${randomNumber} shapes`)
-        }, 500)
-    }    
+            clearGame();
+            resetGame();
+        }, 500);
+        
+    }   
+     
 }
+
+function clearGame(){
+    //clear shape
+    document.body.querySelectorAll('.shape').forEach(n => n.remove());
+    
+    //clear question title
+    let questionTitle = document.querySelector('#question-title').childNodes[0];
+    questionTitle.remove();
+}
+
+function resetGame(){
+    setRandomNumber();
+    setRandomShape();
+    setQuestion();
+    setQuestionShape();
+    createShapes();
+    // collectShapes();
+    addClickHandlerToShape();
+}
+
 
 
 
 setRandomNumber();
 setRandomShape();
-setQuestion()
-setQuestionShape()
+setQuestion();
+setQuestionShape();
 createShapes();
 // collectShapes();
 addClickHandlerToShape();
+
 
