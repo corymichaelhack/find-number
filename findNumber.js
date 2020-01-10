@@ -84,6 +84,7 @@ function clearGame(){
 }
 
 function resetGame(){
+    digit = 0;
     setRandomNumber();
     setRandomShape();
     setQuestion();
