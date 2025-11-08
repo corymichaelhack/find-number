@@ -1,5 +1,8 @@
+'use strict';
+
 let randomNumber;
 let shapeNum;
+let shapes;
 let shapesArray = [ 'square', 'triangle', 'circle'];
 let numberContainer = document.querySelector('#number-container');
 let digit = 0;
